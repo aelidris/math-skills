@@ -10,8 +10,10 @@ func GetNumbers(data string) []int {
 	for _, char := range data {
 		// If the current character is a newline, convert the accumulated string to an integer
 		if char == '\n' {
-			result = append(result, ConvertType(storeNumbers)) // Convert and store the number
-			storeNumbers = ""                                  // Reset the accumulator for the next number
+			if len(storeNumbers) > 0 {
+				result = append(result, ConvertType(storeNumbers)) // Convert and store the number
+			}
+			storeNumbers = "" // Reset the accumulator for the next number
 			continue
 		}
 		// Add the character to the accumulator if it's not a newline
