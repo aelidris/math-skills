@@ -1,29 +1,27 @@
 package static
 
-// GetNumbers extracts integers from a string where each number is separated by new lines.
-// It returns a slice of integers parsed from the string.
+// GetNumbers extracts integers from a string where each number is separated by new lines. It returns a slice of integers parsed from the string.
 func GetNumbers(data string) []int {
-	var result []int   // Initialize a slice to store the parsed numbers
-	storeNumbers := "" // Temporary string to accumulate characters of each number
+	var result []int
+	storeNumbers := ""
 
-	// Iterate over each character in the input string
 	for _, char := range data {
-		// If the current character is a newline, convert the accumulated string to an integer
+
+		// If the current character is a newline, convert the accumulated string (storeNumbers) to an integer
 		if char == '\n' {
 			if len(storeNumbers) > 0 {
-				result = append(result, ConvertType(storeNumbers)) // Convert and store the number
+				result = append(result, ConvertType(storeNumbers))
 			}
-			storeNumbers = "" // Reset the accumulator for the next number
+			storeNumbers = ""
 			continue
 		}
-		// Add the character to the accumulator if it's not a newline
 		storeNumbers += string(char)
 	}
 
-	// Handle any remaining characters that didn't end with a newline
+	// Convert and store the last number
 	if len(storeNumbers) != 0 {
-		result = append(result, ConvertType(storeNumbers)) // Convert and store the last number
+		result = append(result, ConvertType(storeNumbers))
 	}
 
-	return result // Return the slice of parsed integers
+	return result
 }

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	// Check if the correct number of arguments is provided
+	// Check if there are enough arguments to start the program
 	if len(os.Args) < 2 {
 		log.Fatalf("Usage: go run main.go <datafile.txt>")
 	}
