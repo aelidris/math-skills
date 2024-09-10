@@ -24,7 +24,7 @@ The Statistical Calculator performs the following operations:
 1. **Clone the Repository:**
 
 ```sh
-git clone https://your-repo-link.git
+git clone https://learn.zone01oujda.ma/git/aelidris/math-skills
 cd math-skills
 ```
 2. **Compile and Run:** To compile and run the application, use the following command:
