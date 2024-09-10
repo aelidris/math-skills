@@ -1,4 +1,4 @@
-package static
+package statistic
 
 import (
 	"log"

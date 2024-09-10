@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	static "static/functions"
+	statistic "statistic/functions"
 )
 
 func main() {
@@ -26,17 +26,17 @@ func main() {
 	}
 
 	// Convert the file content to a slice of integers
-	data := static.GetNumbers(string(fileContent))
+	data := statistic.GetNumbers(string(fileContent))
 
 	// Calculate and print the average of the numbers
-	fmt.Printf("Average: %d\n", static.CalcAverage(data))
+	fmt.Printf("Average: %d\n", statistic.CalcAverage(data))
 
 	// Calculate and print the median of the numbers
-	fmt.Printf("Median: %d\n", static.CalcMedian(data))
+	fmt.Printf("Median: %d\n", statistic.CalcMedian(data))
 
 	// Calculate and print the variance of the numbers
-	fmt.Printf("Variance: %d\n", static.CalcVariance(data))
+	fmt.Printf("Variance: %d\n", statistic.CalcVariance(data))
 
 	// Calculate and print the standard deviation of the numbers
-	fmt.Printf("Standard Deviation: %d\n", static.CalcStandardDeviation(data))
+	fmt.Printf("Standard Deviation: %d\n", statistic.CalcStandardDeviation(data))
 }

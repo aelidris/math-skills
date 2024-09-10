@@ -1,4 +1,4 @@
-package static
+package statistic
 
 // GetNumbers extracts integers from a string where each number is separated by new lines. It returns a slice of integers parsed from the string.
 func GetNumbers(data string) []int {
