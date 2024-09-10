@@ -10,7 +10,7 @@ The Statistical Calculator performs the following operations:
 - Calculate Variance: Measures the spread of the numbers in the dataset.
 - Calculate Standard Deviation: Evaluates the amount of variation or dispersion in the dataset.
 
-## Authors
+## Author
 - [ABDELFATTAH ELIDRISSI]
 
 ## Usage
